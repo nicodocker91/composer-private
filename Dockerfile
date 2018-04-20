@@ -3,7 +3,7 @@ FROM php:7.1-fpm-alpine
 MAINTAINER "Nicolas Giraud" <nicolas.giraud.dev@gmail.com>
 
 # Set correct environment variables for composer.
-ENV COMPOSER_VENDOR_DIR=vendor COMPOSER_CACHE_DIR=/tmp/.composer
+ENV COMPOSER_MEMORY_LIMIT=-1 COMPOSER_VENDOR_DIR=vendor COMPOSER_CACHE_DIR=/tmp/.composer
 
 # Install the latest version of composer.
 RUN curl -Ls https://getcomposer.org/installer > /tmp/installer && \
